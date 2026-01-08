@@ -61,7 +61,7 @@ Program aşağıdaki gezegenlerin gerçek yerçekimi ivme değerlerini kullanır
 Programı derlemek için:
 
 ```bash
-gcc uzay_simulasyonu.c -o uzay_simulasyonu -lm
+gcc 24360859071_PolatSakarya_kod.c -o uzay_simulasyonu -lm
 ```
 
 **Not:** `-lm` parametresi matematik kütüphanesini (math.h) bağlamak için gereklidir.
@@ -76,7 +76,7 @@ gcc uzay_simulasyonu.c -o uzay_simulasyonu -lm
 
 1. Program başladığında bilim insanının adı istenir.
 2. Deney menüsü gösterilir.
-3. Kullanıcı 1-9 arası bir deney seçer (çıkış için 0).
+3. Kullanıcı 1-9 arası bir deney seçer (çıkış için -1).
 4. Seçilen deneye göre gerekli parametreler istenir.
 5. Tüm gezegenler için sonuçlar hesaplanır ve tablo halinde gösterilir.
 6. Devam etmek için Enter'a basılır ve menü tekrar gösterilir.

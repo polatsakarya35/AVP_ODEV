@@ -64,7 +64,7 @@ int main() {
         menu_goster();
         secim = menu_secimi_al();
         
-        if (secim == 0) {
+        if (secim == -1) {
             printf("\nProgram sonlandırılıyor. İyi çalışmalar, %s!\n", bilim_insani);
             break;
         }
@@ -108,7 +108,7 @@ int main() {
         getchar();
         printf("\n");
         
-    } while(secim != 0);
+    } while(secim != -1);
     
     return 0;
 }
@@ -125,23 +125,23 @@ void menu_goster() {
     printf("7. Basit Sarkaç Periyodu Deneyi\n");
     printf("8. Sabit İp Gerilmesi Deneyi\n");
     printf("9. Asansör Deneyi\n");
-    printf("0. Çıkış\n");
+    printf("-1. Çıkış\n");
 }
 
 // Menü seçimi alma
 int menu_secimi_al() {
     int secim;
-    printf("\nDeney numarasını seçiniz (1-9, çıkış için 0): ");
+    printf("\nDeney numarasını seçiniz (1-9, çıkış için -1): ");
     
     if (scanf("%d", &secim) != 1) {
         // Geçersiz giriş yapıldı
         while(getchar() != '\n'); // Buffer'ı temizliyoruz
-        return -1;
+        return -2;
     }
     
-    if (secim < 0 || secim > 9) {
-        printf("Hata: Lütfen 0 ile 9 arasında bir değer giriniz.\n");
-        return -1;
+    if (secim < -1 || secim > 9) {
+        printf("Hata: Lütfen -1 ile 9 arasında bir değer giriniz.\n");
+        return -2;
     }
     
     return secim;
